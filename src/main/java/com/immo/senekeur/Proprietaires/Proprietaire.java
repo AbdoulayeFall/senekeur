@@ -1,12 +1,12 @@
-package com.immo.senekeur.Clients;
+package com.immo.senekeur.Proprietaires;
 
 import java.io.Serializable;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="client")
-public class Client implements Serializable{
+@Table(name="proprietaire")
+public class Proprietaire implements Serializable{
 	@Id
 	@GeneratedValue
 	private Integer id;  
@@ -21,11 +21,11 @@ public class Client implements Serializable{
 	
 
 
-	public Client() {
+	public Proprietaire() {
 		super();
 	}
 
-	public Client(Integer id, String cIN, String age, String email, String adresse, String tel1, String tel2, 
+	public Proprietaire(Integer id, String cIN, String age, String email, String adresse, String tel1, String tel2, 
                   String nom, String prenom) {
 		super();
 		this.id = id;

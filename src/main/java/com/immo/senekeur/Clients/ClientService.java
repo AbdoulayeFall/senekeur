@@ -22,7 +22,8 @@ public class ClientService {
 		.forEach(clients::add);
 		return clients;
 	}
-
+    
+	
     public Optional<Client> getClient(Integer id) {
 		
 		if (!clientRepository.findById(id).isPresent())
