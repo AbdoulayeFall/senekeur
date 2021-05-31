@@ -13,8 +13,12 @@ public class Terrain extends BiensImmobilier{
     private Integer superficie;
 
 
-    public Terrain(Integer id, String region, String ville) {
-        super(id, region, ville);
+    public Terrain() {
+        super();
+    }
+
+    public Terrain(Integer id, String region, String ville, byte[] photos) {
+        super(id, region, ville, photos);
     }
 
     public Integer getSuperficie() {
