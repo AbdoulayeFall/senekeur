@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
@@ -21,15 +22,18 @@ public abstract class BiensImmobilier implements Serializable{
     private Integer id;
     private String region;
     private String ville;
+    @Lob
+    private byte[] photos;
     
 
     public BiensImmobilier() {
     }
 
-    public BiensImmobilier(Integer id,String region, String ville) {
+    public BiensImmobilier(Integer id,String region, String ville, byte[] photos) {
         this.id = id;
         this.region = region;
         this.ville = ville;
+        this.photos = photos;
     }
 
     public String getRegion() {
@@ -43,6 +47,14 @@ public abstract class BiensImmobilier implements Serializable{
     public void setRegion(String region) {
         this.region = region;
     }
+
+    public byte[] getPhotos() {
+        return photos;
+      }
+    
+      public void setPhotos(byte[] photos) {
+        this.photos = photos;
+      }
 
     public void setVille(String ville) {
         this.ville = ville;
